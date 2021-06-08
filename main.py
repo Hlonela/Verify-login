@@ -1,4 +1,3 @@
-
 from tkinter import*
 from tkinter import messagebox
 
@@ -29,6 +28,11 @@ def button_clear():
     Entry_password.delete(0, END)
     Entry_passname.delete(0, END)
         #CLEARING THE INPUT FIELDS
+
+
+def button_exit():
+    import sys
+    sys.exit()
 
 #Functions
 def func_verify(user, _password, user_pass):
@@ -61,7 +65,7 @@ button_verify = Button (root, text="Verify", borderwidth="10", fg="Navy", bg="Go
 button_verify.place(x=50, y=250)
 button_clear = Button (root, text="Clear", borderwidth="10", fg="Navy", bg="Gold", font=12, command=button_clear)
 button_clear.place(x=150, y=250)
-button_exit = Button (root, text="Exit", borderwidth="10", fg="Navy", bg="Gold", font=12)
+button_exit = Button (root, text="Exit", borderwidth="10", fg="Navy", bg="Gold", font=12, command=button_exit)
 button_exit.place(x=250, y=250)
 
 #Getting the inputs
@@ -73,3 +77,11 @@ button_exit.place(x=250, y=250)
 
 
 root.mainloop()
+
+
+
+
+
+
+
+
